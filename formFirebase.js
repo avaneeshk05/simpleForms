@@ -356,6 +356,7 @@ function validateFormRegister(event) {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log("User is logged in:", user.uid);
+            window.location.href = "studform.html";
         } else {
             console.log("User is logged out.");
         }

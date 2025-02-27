@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Form Collection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .container {
+      background-color: white;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input, select, textarea {
+      width: calc(100% - 10px);
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .marquee {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>SSN College of Engineering</header>
+
+<div class="container">
+  <form id="studentForm">
+    <label for="studentName">Student Name</label>
+    <input type="text" id="studentName" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" required>
+
+    <label for="address">Address</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <label>Course</label>
+    <div class="radio-group">
+      <label><input type="radio" name="course" value="B.Tech" required> B.Tech</label>
+      <label><input type="radio" name="course" value="M.Tech"> M.Tech</label>
+      <label><input type="radio" name="course" value="B.Sc"> B.Sc</label>
+    </div>
+
+    <label>Interests</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="interests" value="Sports"> Sports</label>
+      <label><input type="checkbox" name="interests" value="Cultural"> Cultural</label>
+      <label><input type="checkbox" name="interests" value="Music"> Music</label>
+      <label><input type="checkbox" name="interests" value="Art"> Art</label>
+      <label><input type="checkbox" name="interests" value="Technology"> Technology</label>
+    </div>
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" required>
+
+    <label for="enrollmentNumber">Enrollment Number</label>
+    <input type="text" id="enrollmentNumber" required>
+
+    <label for="department">Department</label>
+    <select id="department" required>
+      <option value="">Select Department</option>
+      <option>Computer Science</option>
+      <option>Mechanical</option>
+      <option>Electrical</option>
+      <option>Civil</option>
+    </select>
+
+    <label for="yearOfStudy">Year of Study</label>
+    <select id="yearOfStudy" required>
+      <option value="">Select Year</option>
+      <option>1st</option>
+      <option>2nd</option>
+      <option>3rd</option>
+      <option>4th</option>
+    </select>
+
+    <label for="guardianName">Parent/Guardian Name</label>
+    <input type="text" id="guardianName" required>
+
+    <label for="guardianContact">Parent/Guardian Contact</label>
+    <input type="text" id="guardianContact" required>
+
+    <label for="emergencyContact">Emergency Contact</label>
+    <input type="text" id="emergencyContact" required>
+
+    <label for="nationality">Nationality</label>
+    <input type="text" id="nationality" required>
+
+    <label for="city">City</label>
+    <input type="text" id="city" required>
+
+    <label for="state">State</label>
+    <input type="text" id="state" required>
+
+    <label for="zip">Zip/Postal Code</label>
+    <input type="text" id="zip" required>
+
+    <label for="country">Country</label>
+    <input type="text" id="country" required>
+
+    <label for="additionalComments">Additional Comments</label>
+    <textarea id="additionalComments" rows="3"></textarea>
+
+    <label for="aadhar">Upload Aadhar Card</label>
+    <input type="file" id="aadhar">
+
+    <label for="signature">Upload Signature</label>
+    <input type="file" id="signature">
+
+    <label for="photo">Upload 12th Grade Passport Size Photo</label>
+    <input type="file" id="photo">
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <marquee>“To be a world class institution for technical education and scientific research for public good.”</marquee>
+</div>
+
+<script>
+  document.getElementById('studentForm').onsubmit = function(e) {
+    e.preventDefault();
+    alert('Form submitted (this is just a placeholder action).');
+  };
+</script>
+
+</body>
+</html>
