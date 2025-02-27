@@ -275,7 +275,7 @@ function validateFormLogin(event) {
 
     let email = document.getElementById("umail").value.trim();
     let password = document.getElementById("pwd").value.trim();
-    let forgotpass=document.getElementById("forgpass");
+    // let forgotpass=document.getElementById("forgpass");
     // let usernameField = document.getElementById("uname"); 
     // let username = usernameField ? usernameField.value.trim() : "";
 
@@ -310,14 +310,14 @@ function validateFormLogin(event) {
             console.log("User is logged out.");
         }
     });
-    let ForgotPassword=()=>{
-        sendPasswordResetEmail(auth,email).then(()=>{
-            alert("Password reset link sent");
-        }).catch((error)=>{
-            alert(error);
-        })
-    }
-    forgotpass.addEventListener("click",ForgotPassword);
+    // let ForgotPassword=()=>{
+    //     sendPasswordResetEmail(auth,email).then(()=>{
+    //         alert("Password reset link sent");
+    //     }).catch((error)=>{
+    //         alert(error);
+    //     })
+    // }
+    // forgotpass.addEventListener("click",ForgotPassword);
 }
 
 //  Registration Validation Function
@@ -361,16 +361,30 @@ function validateFormRegister(event) {
         }
     });
 }
-
+function resetPass(event){
+    event.preventDefault();
+    // let forgotpass=document.getElementById("forgotpass");
+    let email=document.getElementById("fmail").value;
+    alert(email);
+    sendPasswordResetEmail(auth,email).then(()=>{
+        alert("Password reset link sent");
+    }).catch((error)=>{
+        alert(error);
+    });
+    // forgotpass.addEventListener("click",ForgotPassword);
+}
 //  Attach Validation to Form Submission
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
     const registerForm = document.getElementById("registerForm");
-
+    const forgpa=document.getElementById("forgotpass");
     if (loginForm) {
         loginForm.addEventListener("submit", validateFormLogin);
     }
     if (registerForm) {
         registerForm.addEventListener("submit", validateFormRegister);
+    }
+    if (forgpa) {
+        forgpa.addEventListener("submit", resetPass);
     }
 });
