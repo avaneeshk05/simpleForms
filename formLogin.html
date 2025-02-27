@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Page</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <img src="ssnlogo.jpg">
+    <h2>Login Page</h2>
+    <form id="loginForm" onsubmit="return validateFormLogin()">
+        <br><label for="umail">Mail Id:</label>
+        <input type="email" id="umail" placeholder="Enter your email"><br>
+        <br><label for="pwd">password:</label>
+        <input type="password" id="pwd" placeholder="Enter your password"><br>
+        <br><input type="submit" value="submit">
+        <br><a href="formValidation.html">Registeration page</a>
+        <a id="forgpass" href="formValidation.html">Forgot Password</a>
+    </form>
+    <!-- <a -->
+    <!-- <script src="validation.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script> -->
+    <script type="module" src="formFirebase.js"></script>
+</body>
+</html>
